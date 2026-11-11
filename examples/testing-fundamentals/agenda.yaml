@@ -1,0 +1,105 @@
+# Fictional example: a 60-minute online workshop for developers.
+# Names, audience and content are invented for this repository.
+
+session:
+  title: "Testing Fundamentals"
+  fictional: true
+  slot_minutes: 60
+  start: "14:00"
+  format: "Online, 8 to 16 participants, one facilitator"
+  audience: "Developers who write code every day but rarely write tests"
+  promise: "Leave with your first unit test written and one test planned for your own code"
+  description: >
+    A hands-on introduction to unit testing: what makes a test useful,
+    how to structure it, and why it should fail before it passes.
+
+# One sentence per phase, written before anything else.
+# The minute must fall inside the phase's time window.
+acceptance:
+  C1: "At minute 10, every participant has named one bug from their own work that a unit test could have caught."
+  C2: "At minute 35, every participant has predicted the result of at least one test in the live demo before it ran."
+  C3: "At minute 50, every participant has written and run one failing and one passing unit test."
+  C4: "At minute 60, every participant has written down one test they will add to their own code this week."
+
+learning_objectives:
+  LO1: "Write a unit test that follows the arrange-act-assert structure."
+  LO2: "Explain why a new test should be seen failing before it passes."
+  LO3: "Run a test suite and read the output of a failing test."
+  LO4: "Plan one concrete test to add to an existing codebase."
+
+blocks:
+  # C1 Connections
+  - title: "Check-in: the bug that got away"
+    phase: C1
+    minutes: 4
+    type: Opening
+    method: "Chat waterfall: everyone types one sentence, all send at once"
+    purpose: "Connect the topic to bugs participants have already met."
+
+  - title: "What makes a test useful?"
+    phase: C1
+    minutes: 6
+    type: Discussion
+    method: "Pairs for three minutes, then three answers in plenary"
+    purpose: "Surface what participants already believe about tests."
+
+  # C2 Concepts
+  - title: "Anatomy of a unit test"
+    phase: C2
+    minutes: 8
+    type: Input
+    method: "Short talk with live code: arrange, act, assert"
+    purpose: "Give one structure that every test in the session follows."
+    los: [LO1]
+
+  - title: "Story: the test that always passed"
+    phase: C2
+    minutes: 7
+    type: Story
+    method: "One punch, one stumble, one takeaway"
+    purpose: "Show why a test that was never seen failing proves nothing."
+    los: [LO2]
+
+  - title: "Live demo: red, green, refactor"
+    phase: C2
+    minutes: 10
+    type: Demo
+    method: "Facilitator codes; participants call the next step and predict each result"
+    purpose: "Make the test-first rhythm visible before participants try it."
+    los: [LO2, LO3]
+
+  # C3 Concrete Practice
+  - title: "Pair exercise: first failing test"
+    phase: C3
+    minutes: 12
+    type: Exercise
+    method: "Pairs in breakout rooms with a prepared practice repository"
+    purpose: "Apply arrange-act-assert to a small function until the test passes."
+    description: >
+      Each pair gets a function with a known bug. Write a test that exposes it,
+      watch it fail, fix the function, watch the test pass.
+    los: [LO1, LO3]
+
+  - title: "Gallery: one test per pair"
+    phase: C3
+    minutes: 3
+    type: Debrief
+    method: "Each pair pastes its test into the chat; facilitator picks two to discuss"
+    purpose: "Compare solutions and spot common mistakes."
+    los: [LO3]
+
+  # C4 Conclusions
+  - title: "Commitment: one test this week"
+    phase: C4
+    minutes: 6
+    type: Reflection
+    method: "Individual note, then one sentence each in the chat"
+    purpose: "Turn the session into one concrete next step."
+    los: [LO4]
+
+  - title: "Questions and close"
+    phase: C4
+    minutes: 4
+    type: Closing
+    method: "Open questions"
+    purpose: "Clear remaining doubts and end on time."

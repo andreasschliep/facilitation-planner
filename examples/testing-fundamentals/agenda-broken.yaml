@@ -1,0 +1,66 @@
+# Fictional example, broken on purpose.
+# Run: npx plan-session check examples/testing-fundamentals/agenda-broken.yaml
+# Expected: the checker fails with a non-zero exit code.
+
+session:
+  title: "Testing Fundamentals (broken on purpose)"
+  fictional: true
+  slot_minutes: 60
+  start: "14:00"
+
+acceptance:
+  C1: "At minute 10, every participant has named one bug that a unit test could have caught."
+  C2: "At minute 30, the facilitator has shown the red-green-refactor cycle."
+  # C3 runs from minute 30 to 45 here, so minute 25 is outside it.
+  C3: "At minute 25, every participant has written one failing unit test."
+  # C4 acceptance sentence is missing.
+
+learning_objectives:
+  LO1: "Write a unit test that follows the arrange-act-assert structure."
+  LO2: "Explain why a new test should be seen failing before it passes."
+
+blocks:
+  - title: "Check-in: the bug that got away"
+    phase: C1
+    minutes: 10
+    type: Opening
+    method: "Chat waterfall"
+    purpose: "Connect the topic to bugs participants have already met."
+
+  - title: "Anatomy of a unit test"
+    phase: C2
+    minutes: 8
+    type: Input
+    method: "Short talk with live code"
+    purpose: "Give one structure for every test."
+    los: [LO1]
+
+  - title: "Story: the test that always passed"
+    phase: C2
+    minutes: 12
+    type: Story
+    method: "Told by the facilitator"
+    purpose: "Show why a test must be seen failing."
+    los: [LO2]
+
+  - title: "Pair exercise: first failing test"
+    phase: C3
+    minutes: 15
+    type: Exercise
+    method: "Pairs in breakout rooms"
+    # purpose is missing
+
+  - title: "Live demo: red, green, refactor"
+    phase: C2
+    minutes: 7
+    type: Demo
+    method: "Facilitator codes"
+    purpose: "Make the test-first rhythm visible."
+    los: [LO9]
+
+  - title: "Questions and close"
+    phase: C4
+    minutes: 13
+    type: Closing
+    method: "Open questions"
+    purpose: "End on time."

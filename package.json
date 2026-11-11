@@ -1,0 +1,24 @@
+{
+  "name": "facilitation-planner",
+  "version": "0.1.0",
+  "description": "Plan a training session backwards from acceptance sentences and check the timing of a 4C agenda.",
+  "private": true,
+  "license": "MIT",
+  "author": "Andreas Schliep",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "bin": {
+    "plan-session": "bin/plan-session.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "check:example": "node bin/plan-session.js check examples/testing-fundamentals/agenda.yaml",
+    "build:example": "node bin/plan-session.js all examples/testing-fundamentals/agenda.yaml --out examples/testing-fundamentals/generated"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

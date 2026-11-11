@@ -1,0 +1,74 @@
+Workshop title: Testing Fundamentals
+Duration: 60 min
+Start: 14:00
+Description: A hands-on introduction to unit testing: what makes a test useful, how to structure it, and why it should fail before it passes.
+
+Activity: 1 Check-in: the bug that got away
+Duration: 4 min
+Type: Opening
+Method: Chat waterfall: everyone types one sentence, all send at once
+Purpose: Connect the topic to bugs participants have already met.
+4C Phase: C1 Connections
+
+Activity: 2 What makes a test useful?
+Duration: 6 min
+Type: Discussion
+Method: Pairs for three minutes, then three answers in plenary
+Purpose: Surface what participants already believe about tests.
+4C Phase: C1 Connections
+
+Activity: 3 Anatomy of a unit test
+Duration: 8 min
+Type: Input
+Method: Short talk with live code: arrange, act, assert
+Purpose: Give one structure that every test in the session follows.
+4C Phase: C2 Concepts
+Learning Objectives: LO1
+
+Activity: 4 Story: the test that always passed
+Duration: 7 min
+Type: Story
+Method: One punch, one stumble, one takeaway
+Purpose: Show why a test that was never seen failing proves nothing.
+4C Phase: C2 Concepts
+Learning Objectives: LO2
+
+Activity: 5 Live demo: red, green, refactor
+Duration: 10 min
+Type: Demo
+Method: Facilitator codes; participants call the next step and predict each result
+Purpose: Make the test-first rhythm visible before participants try it.
+4C Phase: C2 Concepts
+Learning Objectives: LO2, LO3
+
+Activity: 6 Pair exercise: first failing test
+Duration: 12 min
+Type: Exercise
+Method: Pairs in breakout rooms with a prepared practice repository
+Purpose: Apply arrange-act-assert to a small function until the test passes.
+Description: Each pair gets a function with a known bug. Write a test that exposes it, watch it fail, fix the function, watch the test pass.
+4C Phase: C3 Concrete Practice
+Learning Objectives: LO1, LO3
+
+Activity: 7 Gallery: one test per pair
+Duration: 3 min
+Type: Debrief
+Method: Each pair pastes its test into the chat; facilitator picks two to discuss
+Purpose: Compare solutions and spot common mistakes.
+4C Phase: C3 Concrete Practice
+Learning Objectives: LO3
+
+Activity: 8 Commitment: one test this week
+Duration: 6 min
+Type: Reflection
+Method: Individual note, then one sentence each in the chat
+Purpose: Turn the session into one concrete next step.
+4C Phase: C4 Conclusions
+Learning Objectives: LO4
+
+Activity: 9 Questions and close
+Duration: 4 min
+Type: Closing
+Method: Open questions
+Purpose: Clear remaining doubts and end on time.
+4C Phase: C4 Conclusions
